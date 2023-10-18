@@ -1,34 +1,23 @@
 import { DynamicArray } from './main.js';
+import { data } from './tests.data';
 describe('DesignDynamicArrayTestSuite', () => {
-  const data = [
-    {
-      name: 'Test Case 1',
-      data: ['Array', 1, 'getSize', 'getCapacity'],
-      expectedResult: [null, 0, 1],
-    },
-    {
-      name: 'Test Case 2',
-      data: [null, 0, 5],
-    },
-  ];
-
-  it.each(data)('aaaaa', ({ name, data, expected }) => {
-    let array = new DynamicArray();
-    console.log(array[name]);
+  it.each(data)('$name', ({ name, data, expectedResult }) => {
+    let array;
+    const resultData = [];
     while (data.length > 0) {
-      const command = data.pop();
-      let value = 0;
+      const command = data.shift();
+      let parameter;
 
-      if (
-        command === 'pushback' ||
-        command === 'checkValidPosition' ||
-        command === 'get'
-      )
-        if (command === 'Array') array = new DynamicArray();
-        else array[command];
+      if (command === 'Array' || command === 'pushback' || command === 'get') {
+        parameter = data.shift();
+      }
+
+      if (command === 'Array') {
+        array = new DynamicArray(parameter);
+        resultData.push(null);
+      } else resultData.push(array[command](parameter));
     }
 
-    expect(true).toBe(true);
-    console.log(DynamicArray);
+    expect(resultData).toEqual(expectedResult);
   });
 });

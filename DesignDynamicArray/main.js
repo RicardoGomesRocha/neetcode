@@ -1,46 +1,53 @@
 export class DynamicArray {
   /**
+   * Initialize an empty array with a capacity of capacity, where capacity > 0
    * @constructor
    * @param {number} capacity
    */
   constructor(capacity) {
-    this.capacity = capacity;
+    if (!capacity || capacity < 0) this.capacity === 0;
+    else this.capacity = capacity;
     this.array = [];
   }
 
   /**
+   * Return the element at index i.
+   * The function assumes that index i is valid
    * @param {number} i
    * @returns {number}
    */
   get(i) {
-    if (!checkValidPosition(i)) return false;
-    return this.array[i];
+    if (!this.checkValidPosition(i)) return false;
+    return this.array[i] || null;
   }
 
   /**
+   * Sets the element at index i to n.
+   * Assumes that index i is valid.
    * @param {number} i
    * @param {number} n
    * @returns {void}
    */
   set(i, n) {
-    if (!checkValidPosition(i)) return null;
+    if (!this.checkValidPosition(i)) return null;
     this.array[i] = n;
+    return null;
   }
 
   /**
+   * Will push the element n to the end of the array
    * @param {number} n
    * @returns {void}
    */
   pushback(n) {
-    if (this.array.length === capacity - 1) this.resize();
-
-    const position = this.array.findIndex((value) => value === n);
-    if (position === -1) return null;
-    this.array[position] = this.array[this.capacity - 1];
-    this.array[this.capacity - 1] = n;
+    if (this.array.length === this.capacity - 1) this.resize();
+    this.array.push(n);
+    return null;
   }
 
   /**
+   * Pops and return the element at the end of the array.
+   * Assumes that the array is non-empty
    * @returns {number}
    */
   popback() {
@@ -48,13 +55,16 @@ export class DynamicArray {
   }
 
   /**
+   * Will double the capacity of the array
    * @returns {void}
    */
   resize() {
     this.capacity *= 2;
+    return null;
   }
 
   /**
+   * Returns the number of elements in the array
    * @returns {number}
    */
   getSize() {
@@ -67,6 +77,7 @@ export class DynamicArray {
   }
 
   /**
+   * ReturnS the capacity of the array
    * @returns {number}
    */
   getCapacity() {
