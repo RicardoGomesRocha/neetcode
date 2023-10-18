@@ -7,3 +7,4 @@ My solutions for some of the neetcode.io problems.
 ### Level Easy
 
 - [Design Dynamic Array (Resizable Array)](./DesignDynamicArray/README.md)
+- [Valid Anagram](./ValidAnagram/README.md)
