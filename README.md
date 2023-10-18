@@ -8,3 +8,4 @@ My solutions for some of the neetcode.io problems.
 
 - [Design Dynamic Array (Resizable Array)](./DesignDynamicArray/README.md)
 - [Valid Anagram](./ValidAnagram/README.md)
+- [Contains Duplicate](./ContainsDuplicate/README.md)
