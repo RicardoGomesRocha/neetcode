@@ -17,7 +17,7 @@ export class DynamicArray {
    * @returns {number}
    */
   get(i) {
-    if (!this.checkValidPosition(i)) return false;
+    if (!this.#checkValidPosition(i)) return false;
     return this.array[i];
   }
 
@@ -29,7 +29,7 @@ export class DynamicArray {
    * @returns {void}
    */
   set(i, n) {
-    if (!this.checkValidPosition(i)) return null;
+    if (!this.#checkValidPosition(i)) return null;
     this.array[i] = n;
     return null;
   }
@@ -84,7 +84,12 @@ export class DynamicArray {
     return this.capacity;
   }
 
-  checkValidPosition(i) {
+  /**
+   * Checks if a position in the array is valid
+   * @param {*} i position
+   * @returns
+   */
+  #checkValidPosition(i) {
     if (i >= this.capacity) return false;
     return true;
   }
