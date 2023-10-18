@@ -18,7 +18,7 @@ export class DynamicArray {
    */
   get(i) {
     if (!this.checkValidPosition(i)) return false;
-    return this.array[i] || null;
+    return this.array[i];
   }
 
   /**
@@ -40,7 +40,7 @@ export class DynamicArray {
    * @returns {void}
    */
   pushback(n) {
-    if (this.array.length === this.capacity - 1) this.resize();
+    if (this.array.length === this.capacity) this.resize();
     this.array.push(n);
     return null;
   }
