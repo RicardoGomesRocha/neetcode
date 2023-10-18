@@ -1,3 +1,7 @@
+/**
+ * This file only contains test data.
+ */
+
 export const data = [
   {
     name: 'Test Case 1',
