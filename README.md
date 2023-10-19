@@ -6,6 +6,7 @@ My solutions for some of the neetcode.io problems.
 
 ### Level Easy
 
-- [Design Dynamic Array (Resizable Array)](./DesignDynamicArray/README.md)
-- [Valid Anagram](./ValidAnagram/README.md)
-- [Contains Duplicate](./ContainsDuplicate/README.md)
+- [Design Dynamic Array (Resizable Array)](./Easy/DesignDynamicArray/README.md)
+- [Valid Anagram](./Easy/ValidAnagram/README.md)
+- [Contains Duplicate](./Easy/ContainsDuplicate/README.md)
+- [Valid Palindrome](./Easy/ValidPalindrome/README.md)
