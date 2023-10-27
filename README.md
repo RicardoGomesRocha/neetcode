@@ -10,3 +10,5 @@ My solutions for some of the neetcode.io problems.
 - [Valid Anagram](./Easy/ValidAnagram/README.md)
 - [Contains Duplicate](./Easy/ContainsDuplicate/README.md)
 - [Valid Palindrome](./Easy/ValidPalindrome/README.md)
+- [Two Sums](./Easy/TwoSum/README.md)
+- [GroupAnagrams](./Medium/TwoSum/README.md)

@@ -1,34 +1,48 @@
 type AnagramHashTable = { [key: string]: number };
 type GroupAnagramHashTable = { [key: string]: string[] };
 
+function getDefaultHash(): AnagramHashTable {
+  return {
+    a: 0,
+    b: 0,
+    c: 0,
+    d: 0,
+    e: 0,
+    f: 0,
+    g: 0,
+    h: 0,
+    i: 0,
+    j: 0,
+    k: 0,
+    l: 0,
+    m: 0,
+    n: 0,
+    o: 0,
+    p: 0,
+    q: 0,
+    r: 0,
+    s: 0,
+    t: 0,
+    u: 0,
+    v: 0,
+    w: 0,
+    y: 0,
+    x: 0,
+    z: 0,
+  };
+}
+
 function getHashTable(str: string): AnagramHashTable {
-  const hash: AnagramHashTable = {};
-  for (const s of str) {
-    if (!hash[s]) hash[s] = 0;
-    hash[s]++;
-  }
+  const hash: AnagramHashTable = getDefaultHash();
+  for (const s of str) hash[s] += 1;
   return hash;
 }
 
-function isAnagram(s1: string, s2: string): boolean {
-  if (s1.length !== s2.length) return false;
-
-  const hash1: AnagramHashTable = getHashTable(s1);
-  const hash2: AnagramHashTable = getHashTable(s2);
-
-  for (const key in hash1) {
-    if (hash1[key] != hash2[key]) return false;
-  }
-
-  return true;
-}
-
-function anagramExistsInHashTable(
-  hash: GroupAnagramHashTable,
-  str: string
-): string | null {
-  for (const s in hash) if (isAnagram(s, str)) return s;
-  return null;
+function getKey(s: string): string {
+  const hash = getHashTable(s);
+  let key = '';
+  for (const char in hash) key = `${key},${hash[char]}${char}`;
+  return key;
 }
 
 function getGroupedAnagrams(hash: GroupAnagramHashTable): string[][] {
@@ -40,9 +54,9 @@ function getGroupedAnagrams(hash: GroupAnagramHashTable): string[][] {
 export function groupAnagrams(strs: string[]): string[][] {
   const hash: GroupAnagramHashTable = {};
   for (const str of strs) {
-    const anagramKey = anagramExistsInHashTable(hash, str);
-    if (anagramKey === null) hash[str] = [str];
-    else hash[anagramKey].push(str);
+    const key = getKey(str);
+    if (!hash[key]) hash[key] = [];
+    hash[key].push(str);
   }
   return getGroupedAnagrams(hash);
 }
