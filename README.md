@@ -11,4 +11,8 @@ My solutions for some of the neetcode.io problems.
 - [Contains Duplicate](./Easy/ContainsDuplicate/README.md)
 - [Valid Palindrome](./Easy/ValidPalindrome/README.md)
 - [Two Sums](./Easy/TwoSum/README.md)
+- [Binary Search](./Easy/TwoSum/README.md)
+
+### Level Easy
+
 - [GroupAnagrams](./Medium/TwoSum/README.md)
