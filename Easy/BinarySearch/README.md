@@ -1,4 +1,4 @@
-# Valid Palindrome
+# Binary Search
 
 _Exercise can be found here: <https://leetcode.com/problems/binary-search/description/>_
 
