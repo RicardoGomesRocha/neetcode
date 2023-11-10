@@ -13,6 +13,7 @@ My solutions for some of the neetcode.io problems.
 - [Two Sums](./Easy/TwoSum/README.md)
 - [Binary Search](./Easy/BinarySearch/README.md)
 - [Valid Parentheses](./Easy/ValidParentheses/README.md)
+- [Best Time to Buy and Sell Stock](./Easy/ValidParentheses/README.md)
 
 ### Level Medium
 
