@@ -1,6 +1,6 @@
 # Top K Frequent Elements
 
-_Exercise can be found here: <https://leetcode.com/problems/top-k-frequent-elements/description//>_
+_Exercise can be found here: <https://leetcode.com/problems/top-k-frequent-elements/description/>_
 
 Given an integer array nums and an integer k, return the k most frequent elements. You may return the answer in any order.
 
@@ -20,7 +20,5 @@ Output: [1] is not a palindrome.
 
 ## Constraints
 
-- `1 <= nums.length <= 105`
-- `-104 <= nums[i] <= 104`
-- k is in the range [1, the number of unique elements in the array].
-- It is guaranteed that the answer is unique.
+- `0 <= s.length <= 5 * 104`
+- s consists of English letters, digits, symbols and spaces.
