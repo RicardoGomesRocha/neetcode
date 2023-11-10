@@ -14,6 +14,7 @@ My solutions for some of the neetcode.io problems.
 - [Binary Search](./Easy/BinarySearch/README.md)
 - [Valid Parentheses](./Easy/ValidParentheses/README.md)
 
-### Level Easy
+### Level Medium
 
-- [GroupAnagrams](./Medium/TwoSum/README.md)
+- [Group Anagrams](./Medium/TwoSum/README.md)
+- [Top K Frequent elements](./Medium/TopKFrequentElements/README.md)
