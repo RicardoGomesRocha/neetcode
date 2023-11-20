@@ -19,3 +19,8 @@ My solutions for some of the neetcode.io problems.
 
 - [Group Anagrams](./Medium/TwoSum/README.md)
 - [Top K Frequent elements](./Medium/TopKFrequentElements/README.md)
+- [Longest Consecutive Sequence](./Medium/LongestConsecutiveSequence/README.md)
+- [Longest Substring Without Repeating Character](./Medium/LogestSubstringWithoutRepeatingCharacters/README.md)
+- [Product of Array Except Self](./Medium/ProductOfArrayExceptSelf/README.md)
+- [Two Sum II - Input Array Is Sorted](./Medium/TwoSumInputArraySorted/README.md)
+- [Search 2D Matrix](./Medium/Search2DMatrix/README.md)
