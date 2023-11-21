@@ -14,6 +14,8 @@ My solutions for some of the neetcode.io problems.
 - [Binary Search](./Easy/BinarySearch/README.md)
 - [Valid Parentheses](./Easy/ValidParentheses/README.md)
 - [Best Time to Buy and Sell Stock](./Easy/ValidParentheses/README.md)
+- [Invert Binary Tree](./Easy/InvertBinaryTree/README.md)
+- [Maximum Depth of Binary Tree](./Easy/MaximumDepthOfBinaryTree/README.md)
 
 ### Level Medium
 
